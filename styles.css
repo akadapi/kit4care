@@ -1,0 +1,598 @@
+:root {
+  --cream: #fff7ef;
+  --peach: #ffd7c2;
+  --coral: #f48f7b;
+  --berry: #a34b66;
+  --sage: #b8d9b0;
+  --mint: #ddf2e5;
+  --sky: #d8eeff;
+  --ink: #3e3350;
+  --card: rgba(255, 255, 255, 0.82);
+  --shadow: 0 22px 50px rgba(122, 74, 91, 0.15);
+  --radius-xl: 32px;
+  --radius-lg: 24px;
+  --radius-md: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(255, 214, 194, 0.9), transparent 28%),
+    radial-gradient(circle at right 15%, rgba(221, 242, 229, 0.95), transparent 22%),
+    linear-gradient(180deg, #fffdf8 0%, #fff5ef 46%, #fffaf6 100%);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 24px 0 48px;
+}
+
+.topbar,
+.hero-art,
+.gift-card,
+.impact-strip article,
+.product-card,
+.impact-grid article,
+.waitlist-form,
+.waitlist-note {
+  backdrop-filter: blur(14px);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  margin-bottom: 28px;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(163, 75, 102, 0.12);
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Baloo 2", cursive;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: linear-gradient(160deg, var(--coral), #ffb38e);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.brand-name {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-weight: 700;
+}
+
+.hero-grid,
+.waitlist-section {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.hero {
+  padding-bottom: 40px;
+}
+
+.hero-copy,
+.waitlist-copy {
+  padding: 10px 6px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--berry);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: "Baloo 2", cursive;
+  line-height: 0.98;
+}
+
+h1 {
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  max-width: 11ch;
+}
+
+h2 {
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+.hero-text,
+.section-heading p,
+.impact-grid p,
+.waitlist-copy p,
+.product-copy p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.hero-text {
+  max-width: 58ch;
+  margin: 18px 0 0;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 26px 0 22px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 22px;
+  border-radius: 999px;
+  font-weight: 800;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  background: linear-gradient(135deg, var(--berry), var(--coral));
+  color: #fff;
+  box-shadow: 0 16px 28px rgba(163, 75, 102, 0.28);
+}
+
+.button-secondary {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(163, 75, 102, 0.14);
+}
+
+.hero-highlights {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.hero-highlights li {
+  padding-left: 18px;
+  position: relative;
+  font-weight: 700;
+}
+
+.hero-highlights li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--coral);
+  box-shadow: 14px 0 0 var(--sage);
+}
+
+.hero-art {
+  position: relative;
+  min-height: 560px;
+}
+
+.cloud {
+  position: absolute;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  filter: blur(2px);
+}
+
+.cloud-one {
+  inset: 30px 72px auto auto;
+  width: 150px;
+  height: 54px;
+}
+
+.cloud-two {
+  inset: auto auto 80px 24px;
+  width: 112px;
+  height: 40px;
+}
+
+.gift-card {
+  position: absolute;
+  padding: 24px;
+  border-radius: var(--radius-xl);
+  background: var(--card);
+  border: 1px solid rgba(163, 75, 102, 0.12);
+  box-shadow: var(--shadow);
+}
+
+.featured-plush {
+  inset: 42px 76px auto 0;
+  max-width: 330px;
+  transform: rotate(-5deg);
+}
+
+.featured-bracelet {
+  inset: auto 0 38px 96px;
+  max-width: 310px;
+  transform: rotate(6deg);
+}
+
+.product-badge {
+  display: inline-flex;
+  margin-bottom: 14px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(244, 143, 123, 0.18);
+  color: var(--berry);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.product-badge.soft {
+  background: rgba(184, 217, 176, 0.26);
+}
+
+.toy {
+  position: relative;
+  width: 168px;
+  height: 168px;
+  margin: 8px auto 18px;
+  border-radius: 44% 44% 38% 38%;
+}
+
+.toy-bear {
+  background: linear-gradient(180deg, #bf8a66 0%, #a66f4d 100%);
+}
+
+.toy-bunny {
+  background: linear-gradient(180deg, #fff1f7 0%, #ffd7e8 100%);
+}
+
+.ear {
+  position: absolute;
+  top: -22px;
+  width: 52px;
+  height: 62px;
+  border-radius: 46px;
+}
+
+.toy-bear .ear {
+  background: #b37a59;
+}
+
+.toy-bunny .ear {
+  height: 86px;
+  background: #ffe4ee;
+}
+
+.ear-left {
+  left: 16px;
+}
+
+.ear-right {
+  right: 16px;
+}
+
+.face {
+  position: absolute;
+  inset: 42px 34px 26px;
+  border-radius: 40%;
+  background:
+    radial-gradient(circle at 36% 40%, #34263a 0 4px, transparent 5px),
+    radial-gradient(circle at 64% 40%, #34263a 0 4px, transparent 5px),
+    radial-gradient(circle at 50% 58%, #fbe5db 0 20px, transparent 21px),
+    radial-gradient(circle at 50% 60%, #34263a 0 4px, transparent 5px);
+}
+
+.bracelet-art {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 6px 0 18px;
+}
+
+.bracelet-art span {
+  width: 28px;
+  height: 112px;
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      180deg,
+      #ffcd85 0 18%,
+      #ff8aa5 18% 36%,
+      #99d8c3 36% 56%,
+      #ffd6ec 56% 74%,
+      #f6b16d 74% 100%
+    );
+  box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.45);
+}
+
+.bracelet-art.cool span {
+  background:
+    linear-gradient(
+      180deg,
+      #bad5ff 0 18%,
+      #c9b8ff 18% 36%,
+      #99d8c3 36% 56%,
+      #ffe8b4 56% 74%,
+      #ffa0b8 74% 100%
+    );
+}
+
+.impact-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 10px 0 64px;
+}
+
+.impact-strip article,
+.impact-grid article,
+.product-card,
+.waitlist-form,
+.waitlist-note {
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(163, 75, 102, 0.12);
+  box-shadow: var(--shadow);
+}
+
+.impact-strip article {
+  padding: 24px;
+  border-radius: var(--radius-lg);
+}
+
+.impact-strip strong {
+  display: block;
+  margin-bottom: 8px;
+  font-family: "Baloo 2", cursive;
+  font-size: 2rem;
+}
+
+.shop-section,
+.impact-section,
+.waitlist-section {
+  padding: 34px 0;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: 28px;
+}
+
+.product-grid,
+.impact-grid {
+  display: grid;
+  gap: 22px;
+}
+
+.product-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.impact-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.product-card {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 18px;
+  padding: 20px;
+  border-radius: var(--radius-xl);
+}
+
+.product-visual {
+  display: grid;
+  place-items: center;
+  min-height: 190px;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.35)),
+    linear-gradient(180deg, rgba(216, 238, 255, 0.7), rgba(255, 215, 194, 0.4));
+}
+
+.product-card.bracelet .product-visual {
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.35)),
+    linear-gradient(180deg, rgba(221, 242, 229, 0.82), rgba(255, 243, 207, 0.42));
+}
+
+.product-type {
+  margin: 2px 0 10px;
+  color: var(--berry);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+}
+
+.product-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  margin-top: 14px;
+  font-weight: 800;
+}
+
+.product-meta span:first-child {
+  font-size: 1.3rem;
+}
+
+.impact-grid article {
+  padding: 24px;
+  border-radius: var(--radius-lg);
+}
+
+.waitlist-note,
+.waitlist-form {
+  border-radius: var(--radius-xl);
+}
+
+.waitlist-note {
+  display: grid;
+  gap: 6px;
+  max-width: 520px;
+  padding: 18px 20px;
+  margin-top: 22px;
+}
+
+.waitlist-form {
+  padding: 24px;
+}
+
+.waitlist-form label {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.waitlist-form input,
+.waitlist-form select,
+.waitlist-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(163, 75, 102, 0.16);
+  border-radius: 16px;
+  font: inherit;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.waitlist-form input:focus,
+.waitlist-form select:focus,
+.waitlist-form textarea:focus {
+  outline: 3px solid rgba(244, 143, 123, 0.25);
+  border-color: rgba(163, 75, 102, 0.35);
+}
+
+.submit-button {
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.form-feedback {
+  min-height: 24px;
+  margin: 14px 0 0;
+  font-weight: 700;
+  color: var(--berry);
+}
+
+@media (max-width: 980px) {
+  .hero-grid,
+  .waitlist-section,
+  .impact-strip,
+  .product-grid,
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-art {
+    min-height: 520px;
+  }
+
+  .featured-plush {
+    inset: 10px auto auto 0;
+  }
+
+  .featured-bracelet {
+    inset: auto 0 0 auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .page-shell {
+    width: min(100% - 20px, 1180px);
+  }
+
+  .topbar {
+    border-radius: 28px;
+    padding: 18px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  h1 {
+    max-width: 9ch;
+  }
+
+  .hero-art {
+    min-height: 450px;
+  }
+
+  .gift-card {
+    position: relative;
+    inset: auto;
+    max-width: none;
+    margin-bottom: 18px;
+    transform: none;
+  }
+
+  .product-card {
+    grid-template-columns: 1fr;
+  }
+
+  .product-visual {
+    min-height: 170px;
+  }
+}
