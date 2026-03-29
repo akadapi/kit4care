@@ -1,14 +1,15 @@
 :root {
-  --cream: #fff7ef;
-  --peach: #ffd7c2;
-  --coral: #f48f7b;
-  --berry: #a34b66;
-  --sage: #b8d9b0;
-  --mint: #ddf2e5;
-  --sky: #d8eeff;
-  --ink: #3e3350;
-  --card: rgba(255, 255, 255, 0.82);
-  --shadow: 0 22px 50px rgba(122, 74, 91, 0.15);
+  --cream: #f7f1e4;
+  --cream-deep: #efe3cf;
+  --vanilla: #fffaf2;
+  --honey: #f3ddb2;
+  --caramel: #b26f43;
+  --terracotta: #d98564;
+  --sage: #9ab39a;
+  --sage-light: #d4e1d1;
+  --ink: #6f4328;
+  --card: rgba(255, 251, 245, 0.84);
+  --shadow: 0 22px 50px rgba(137, 101, 66, 0.14);
   --radius-xl: 32px;
   --radius-lg: 24px;
   --radius-md: 18px;
@@ -27,9 +28,9 @@ body {
   font-family: "Nunito", sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(circle at top left, rgba(255, 214, 194, 0.9), transparent 28%),
-    radial-gradient(circle at right 15%, rgba(221, 242, 229, 0.95), transparent 22%),
-    linear-gradient(180deg, #fffdf8 0%, #fff5ef 46%, #fffaf6 100%);
+    radial-gradient(circle at top left, rgba(243, 221, 178, 0.8), transparent 28%),
+    radial-gradient(circle at right 18%, rgba(212, 225, 209, 0.85), transparent 24%),
+    linear-gradient(180deg, #fbf6ed 0%, #f6efdf 46%, #fff8ef 100%);
 }
 
 img {
@@ -66,8 +67,8 @@ a {
   gap: 16px;
   padding: 18px 22px;
   margin-bottom: 28px;
-  background: rgba(255, 255, 255, 0.62);
-  border: 1px solid rgba(163, 75, 102, 0.12);
+  background: rgba(255, 250, 242, 0.72);
+  border: 1px solid rgba(178, 111, 67, 0.16);
   border-radius: 999px;
   box-shadow: var(--shadow);
 }
@@ -84,16 +85,21 @@ a {
   place-items: center;
   width: 48px;
   height: 48px;
-  border-radius: 16px;
-  background: linear-gradient(160deg, var(--coral), #ffb38e);
-  color: #fff;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.85), transparent 34%),
+    linear-gradient(160deg, #f7e7c3, #efc88b);
+  border: 3px solid var(--caramel);
+  color: var(--caramel);
   font-size: 1.2rem;
   font-weight: 700;
+  box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.55);
 }
 
 .brand-name {
   font-size: 1.7rem;
   font-weight: 700;
+  color: var(--terracotta);
 }
 
 .nav-links {
@@ -125,8 +131,8 @@ a {
   margin: 0 0 12px;
   padding: 8px 12px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.8);
-  color: var(--berry);
+  background: rgba(255, 249, 241, 0.92);
+  color: var(--terracotta);
   font-weight: 800;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -192,14 +198,14 @@ h3 {
 }
 
 .button-primary {
-  background: linear-gradient(135deg, var(--berry), var(--coral));
+  background: linear-gradient(135deg, var(--caramel), var(--terracotta));
   color: #fff;
-  box-shadow: 0 16px 28px rgba(163, 75, 102, 0.28);
+  box-shadow: 0 16px 28px rgba(178, 111, 67, 0.28);
 }
 
 .button-secondary {
-  background: rgba(255, 255, 255, 0.75);
-  border: 1px solid rgba(163, 75, 102, 0.14);
+  background: rgba(255, 250, 242, 0.88);
+  border: 1px solid rgba(178, 111, 67, 0.16);
 }
 
 .hero-highlights {
@@ -224,7 +230,7 @@ h3 {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--coral);
+  background: var(--terracotta);
   box-shadow: 14px 0 0 var(--sage);
 }
 
@@ -236,7 +242,7 @@ h3 {
 .cloud {
   position: absolute;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 251, 245, 0.88);
   filter: blur(2px);
 }
 
@@ -257,7 +263,7 @@ h3 {
   padding: 24px;
   border-radius: var(--radius-xl);
   background: var(--card);
-  border: 1px solid rgba(163, 75, 102, 0.12);
+  border: 1px solid rgba(178, 111, 67, 0.14);
   box-shadow: var(--shadow);
 }
 
@@ -278,14 +284,14 @@ h3 {
   margin-bottom: 14px;
   padding: 8px 12px;
   border-radius: 999px;
-  background: rgba(244, 143, 123, 0.18);
-  color: var(--berry);
+  background: rgba(217, 133, 100, 0.16);
+  color: var(--caramel);
   font-size: 0.82rem;
   font-weight: 800;
 }
 
 .product-badge.soft {
-  background: rgba(184, 217, 176, 0.26);
+  background: rgba(154, 179, 154, 0.22);
 }
 
 .toy {
@@ -297,11 +303,11 @@ h3 {
 }
 
 .toy-bear {
-  background: linear-gradient(180deg, #bf8a66 0%, #a66f4d 100%);
+  background: linear-gradient(180deg, #e8c18f 0%, #d6a468 100%);
 }
 
 .toy-bunny {
-  background: linear-gradient(180deg, #fff1f7 0%, #ffd7e8 100%);
+  background: linear-gradient(180deg, #fff6ea 0%, #f3dec0 100%);
 }
 
 .ear {
@@ -313,12 +319,12 @@ h3 {
 }
 
 .toy-bear .ear {
-  background: #b37a59;
+  background: #d09a68;
 }
 
 .toy-bunny .ear {
   height: 86px;
-  background: #ffe4ee;
+  background: #f6e3c8;
 }
 
 .ear-left {
@@ -334,10 +340,10 @@ h3 {
   inset: 42px 34px 26px;
   border-radius: 40%;
   background:
-    radial-gradient(circle at 36% 40%, #34263a 0 4px, transparent 5px),
-    radial-gradient(circle at 64% 40%, #34263a 0 4px, transparent 5px),
-    radial-gradient(circle at 50% 58%, #fbe5db 0 20px, transparent 21px),
-    radial-gradient(circle at 50% 60%, #34263a 0 4px, transparent 5px);
+    radial-gradient(circle at 36% 40%, #8a5837 0 4px, transparent 5px),
+    radial-gradient(circle at 64% 40%, #8a5837 0 4px, transparent 5px),
+    radial-gradient(circle at 50% 58%, #f8ecd8 0 20px, transparent 21px),
+    radial-gradient(circle at 50% 60%, #8a5837 0 4px, transparent 5px);
 }
 
 .bracelet-art {
@@ -354,11 +360,11 @@ h3 {
   background:
     linear-gradient(
       180deg,
-      #ffcd85 0 18%,
-      #ff8aa5 18% 36%,
-      #99d8c3 36% 56%,
-      #ffd6ec 56% 74%,
-      #f6b16d 74% 100%
+      #efd4a4 0 18%,
+      #9ab39a 18% 36%,
+      #f0e7d8 36% 56%,
+      #d98564 56% 74%,
+      #c98656 74% 100%
     );
   box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.45);
 }
@@ -367,11 +373,11 @@ h3 {
   background:
     linear-gradient(
       180deg,
-      #bad5ff 0 18%,
-      #c9b8ff 18% 36%,
-      #99d8c3 36% 56%,
-      #ffe8b4 56% 74%,
-      #ffa0b8 74% 100%
+      #d9c4ad 0 18%,
+      #e7b680 18% 36%,
+      #cbdac4 36% 56%,
+      #f2e4c9 56% 74%,
+      #d38b69 74% 100%
     );
 }
 
@@ -387,8 +393,8 @@ h3 {
 .product-card,
 .waitlist-form,
 .waitlist-note {
-  background: rgba(255, 255, 255, 0.74);
-  border: 1px solid rgba(163, 75, 102, 0.12);
+  background: rgba(255, 251, 245, 0.78);
+  border: 1px solid rgba(178, 111, 67, 0.14);
   box-shadow: var(--shadow);
 }
 
@@ -443,19 +449,19 @@ h3 {
   min-height: 190px;
   border-radius: 24px;
   background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.35)),
-    linear-gradient(180deg, rgba(216, 238, 255, 0.7), rgba(255, 215, 194, 0.4));
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.35)),
+    linear-gradient(180deg, rgba(247, 237, 214, 0.78), rgba(239, 227, 207, 0.52));
 }
 
 .product-card.bracelet .product-visual {
   background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.35)),
-    linear-gradient(180deg, rgba(221, 242, 229, 0.82), rgba(255, 243, 207, 0.42));
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.35)),
+    linear-gradient(180deg, rgba(212, 225, 209, 0.74), rgba(243, 221, 178, 0.34));
 }
 
 .product-type {
   margin: 2px 0 10px;
-  color: var(--berry);
+  color: var(--terracotta);
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -508,7 +514,7 @@ h3 {
 .waitlist-form textarea {
   width: 100%;
   padding: 14px 16px;
-  border: 1px solid rgba(163, 75, 102, 0.16);
+  border: 1px solid rgba(178, 111, 67, 0.18);
   border-radius: 16px;
   font: inherit;
   color: var(--ink);
@@ -518,8 +524,8 @@ h3 {
 .waitlist-form input:focus,
 .waitlist-form select:focus,
 .waitlist-form textarea:focus {
-  outline: 3px solid rgba(244, 143, 123, 0.25);
-  border-color: rgba(163, 75, 102, 0.35);
+  outline: 3px solid rgba(217, 133, 100, 0.22);
+  border-color: rgba(178, 111, 67, 0.35);
 }
 
 .submit-button {
@@ -533,7 +539,7 @@ h3 {
   min-height: 24px;
   margin: 14px 0 0;
   font-weight: 700;
-  color: var(--berry);
+  color: var(--terracotta);
 }
 
 @media (max-width: 980px) {
