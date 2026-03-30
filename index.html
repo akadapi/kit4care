@@ -6,7 +6,7 @@
     <title>kit4care | Gifts with Heart</title>
     <meta
       name="description"
-      content="kit4care is a playful, charity-focused gift shop with cuddly stuffed animals, handmade-style bracelets, and a feel-good waitlist for future orders."
+      content="kit4care is a playful, charity-focused gift shop with cuddly stuffed animals, handmade-style bracelets, and a simple order request form for future purchases."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,13 +21,17 @@
       <header class="hero">
         <nav class="topbar">
           <a class="brand" href="#top">
-            <span class="brand-mark">k4c</span>
+            <img
+              class="brand-logo"
+              src="./kit4care_logo.png"
+              alt="Kit4Care logo"
+            />
             <span class="brand-name">Kit4Care</span>
           </a>
           <div class="nav-links">
             <a href="#shop">Shop</a>
             <a href="#impact">Our Impact</a>
-            <a href="#waitlist">Waitlist</a>
+            <a href="#order-form">Order Form</a>
           </div>
         </nav>
 
@@ -41,7 +45,7 @@
               impact.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#waitlist">Join the Waitlist</a>
+              <a class="button button-primary" href="#order-form">Request an Order</a>
               <a class="button button-secondary" href="#shop">See Gift Picks</a>
             </div>
             <ul class="hero-highlights">
@@ -54,6 +58,9 @@
           <div class="hero-art" aria-hidden="true">
             <div class="cloud cloud-one"></div>
             <div class="cloud cloud-two"></div>
+            <div class="logo-medallion">
+              <img src="./kit4care_logo.png" alt="" />
+            </div>
             <div class="gift-card featured-plush">
               <span class="product-badge">Best Loved</span>
               <div class="toy toy-bear">
@@ -217,21 +224,21 @@
           </div>
         </section>
 
-        <section class="waitlist-section" id="waitlist">
+        <section class="waitlist-section" id="order-form">
           <div class="waitlist-copy">
-            <p class="eyebrow">Reserve your favorites</p>
-            <h2>Join the launch waitlist</h2>
+            <p class="eyebrow">Send an order request</p>
+            <h2>Tell us what you would like to order</h2>
             <p>
-              Tell us what you’d love to buy first, and we’ll reach out when the first
-              gift drop is ready. No payment needed yet.
+              Share your gift picks and a few details, and we’ll follow up to confirm
+              availability, pricing, and next steps. No payment is needed yet.
             </p>
             <div class="waitlist-note">
-              <strong>Early supporters receive:</strong>
-              <span>first-access updates, sample drop announcements, and a thank-you gift note template.</span>
+              <strong>Order requests help us plan:</strong>
+              <span>launch inventory, bundle ideas, gift wrapping, and how many care items we can fund with each collection.</span>
             </div>
           </div>
 
-          <form class="waitlist-form" id="waitlist-form">
+          <form class="waitlist-form" id="order-request-form">
             <label>
               Name
               <input type="text" name="name" placeholder="Jamie Rivera" required />
@@ -241,7 +248,7 @@
               <input type="email" name="email" placeholder="jamie@example.com" required />
             </label>
             <label>
-              Favorite item
+              Item you want
               <select name="interest" required>
                 <option value="">Choose one</option>
                 <option>Hope Bear</option>
@@ -251,7 +258,17 @@
               </select>
             </label>
             <label>
-              Why are you shopping?
+              Quantity
+              <select name="quantity" required>
+                <option value="">Choose one</option>
+                <option>1 item</option>
+                <option>2 items</option>
+                <option>3 items</option>
+                <option>4+ items</option>
+              </select>
+            </label>
+            <label>
+              Occasion
               <select name="occasion" required>
                 <option value="">Choose one</option>
                 <option>Birthday gift</option>
@@ -261,15 +278,24 @@
               </select>
             </label>
             <label>
-              Message
+              Preferred contact
+              <select name="contactPreference" required>
+                <option value="">Choose one</option>
+                <option>Email me</option>
+                <option>Text me</option>
+                <option>Either works</option>
+              </select>
+            </label>
+            <label>
+              Order notes
               <textarea
                 name="message"
                 rows="4"
-                placeholder="I'd love updates about plush launch bundles or bracelet gift sets."
+                placeholder="I’d love gift wrapping, a bracelet bundle, or matching plush options."
               ></textarea>
             </label>
             <button class="button button-primary submit-button" type="submit">
-              Save My Spot
+              Send Order Request
             </button>
             <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
           </form>
